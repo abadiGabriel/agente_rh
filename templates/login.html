@@ -7,13 +7,14 @@
     </head>
 
     <body style="text-align: center;">
-        <form>
+        
+        <form action="{% url 'resultado' %}" method="post">
+            {% csrf_token %}
             <label for="input-usuario">Usuário</label>
-            <input type="text" name="input-usuario">
+            <input type="text" name="usuario">
             <label for="input-senha">Senha</label>
-            <input type="password" name="input-senha">
+            <input type="password" name="senha">
             <button>Entrar</button>
-            
         </form>
     </body>
 
